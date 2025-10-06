@@ -1,7 +1,7 @@
 import { Mail, KeyRound } from "lucide-react"
 import { useState } from "react";
-import FormField from "../components/FormField";
-import TitleForm from "../components/titleForm";
+import FormContainer from "../components/FormContainer";
+
 
 
 const LoginPage = () => {
@@ -12,24 +12,30 @@ const LoginPage = () => {
     e.preventDefault();
   }
 
+  const fields = [
+    {
+      fieldName: 'email',
+      label: 'Ingrese su correo',
+      FieldIcon: Mail,
+      fieldValue: email,
+      onChange: setEmail,
+      type: 'email',
+      placeHolder: 'Ej.: 2XN0a@example.com',
+    },
+
+    {
+      fieldName: 'password',
+      label: 'Ingrese su contraseña',
+      FieldIcon: KeyRound,
+      fieldValue: password,
+      onChange: setPassword,
+      type: 'password',
+      placeHolder: 'Ej.: 123456',
+    },
+  ]
   return (
 
-    <div className="flex flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
-      <TitleForm title={"Logearse"} />
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-gray-800 py-8 px-4 shadow sm:rounded-lg sm:px-10 ">
-          <form onSubmit={handleSubmit} className="space-y-10">
-            <FormField fieldName="email" FieldIcon={Mail} fieldValue={email} onChange={setEmail} />
-            <FormField fildName="password" FieldIcon={KeyRound} fieldValue={password} onChange={setPassword} />
-            <button className="w-full flex justify-center border rounded-md 
-            border-transparent bg-emerald-600 py-2 px-4 text-sm font-medium text-white hover:bg-emerald-700
-            focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-              type="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
+    <FormContainer title="Iniciar Sesión" fields={fields} onSubmit={handleSubmit} />
   );
 };
 
