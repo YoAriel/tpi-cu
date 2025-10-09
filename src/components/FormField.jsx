@@ -21,7 +21,7 @@ const FormField = ({ fieldName, label, FieldIcon, fieldValue, onChange, type = "
                     onChange={(e) => onChange(e.target.value)}
                     placeholder={placeHolder || label || `Ingrese su ${fieldName}`}//que tome algún valor
                     className="block w-full appearance-none rounded-md border border-gray-300px 
-                    px-3 py-2 placeholder-gray-400 shadow-sm focus:border-emerald-500 focus:outline-none
+                    px-10 py-2 placeholder-gray-400 shadow-sm focus:border-emerald-500 focus:outline-none
                     focus:ring-emerald-500 sm:text-sm text-gray-400"
                 />
             </div>

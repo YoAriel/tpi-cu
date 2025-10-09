@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AdminTabs from "../components/AdminTabs"
 import CreateProductForm from "../components/CreateProductForm";
 import ProductList from "../components/ProductList";
+import Analytics from "../components/Analytics";
 
 
 const AdminPage = () => {
@@ -52,6 +53,7 @@ const AdminPage = () => {
                 {activeTab === 'products' && (
                     <ProductList products={products} removeProduct={removeProduct} toggleActive={toggleActive} />
                 )}
+                {activeTab === 'analytics' && <Analytics />}
             </div>
         </div>
     )
