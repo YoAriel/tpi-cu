@@ -14,18 +14,6 @@ const AdminTabs = (activeTab, setActiveTab) => {
 
 
 
-    const toggleActive = (productId) => {
-        console.log("Se está cambiando el estado del producto", productId);
-        //como la api que usamos no tiene la propiedad activo, se le pasa una propiedad activa a los productos para poder usarlos
-        if (products.active === undefined) {
-            products.active = true
-        }
-        setProducts(products.map(product => product.id === productId ? { ...product, active: !product.active } : product))
-    }
-
-
-
-
 
     return (
         <div className="flex justify-center mb-8">
