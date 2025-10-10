@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 
 const CategoryPage = () => {
   const { category } = useParams();
