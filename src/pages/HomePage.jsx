@@ -1,9 +1,11 @@
+import CategoriesList from "../components/CategoriesList";
+
 const HomePage = () => {
   return (
     <div>
-      <h1>Página de Home</h1>
+      <CategoriesList />
     </div>
   );
 };
 
-export default HomePage
+export default HomePage;

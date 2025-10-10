@@ -33,7 +33,7 @@ const App = () => {
             user.role === "admin" ? <AdminPage /> : <Navigate to="/login" />
           }
         />
-        {/* <Route path="/category/:category" element={<CategoryPage />} /> */}
+        <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
     </Router>
   );
